@@ -62,9 +62,33 @@
 </head>
 <body>
     <div class="container">
-        <a href="downloads/Release.zip" download>
+        <h1>Matrise Project Download</h1>
+        <a href="downloads/Release.zip" download id="download-link">
             <button class="download-btn">Download Matrise</button>
         </a>      
+        <p id="download-count">Downloads: 0</p>
     </div>
+
+    <script>
+        // Function to get the current download count from localStorage
+        function getDownloadCount() {
+            return parseInt(localStorage.getItem('downloadCount')) || 0;
+        }
+
+        // Function to update the download count in localStorage
+        function updateDownloadCount() {
+            const currentCount = getDownloadCount();
+            localStorage.setItem('downloadCount', currentCount + 1);
+            document.getElementById('download-count').textContent = `Downloads: ${currentCount + 1}`;
+        }
+
+        // Event listener for the download button click
+        document.getElementById('download-link').addEventListener('click', updateDownloadCount);
+
+        // Initialize the download count on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('download-count').textContent = `Downloads: ${getDownloadCount()}`;
+        });
+    </script>
 </body>
 </html>
