@@ -4,12 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matrise Project Download</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Align items to the top */
+            min-height: 100vh;
+            padding-top: 50px; /* Add some top padding to ensure content isn’t too close to the top */
+        }
+
+        .container {
+            background-color: #1f1f1f;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #00bfa5;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .download-btn {
+            background-color: #8a9795;
+            color: #ffffff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .download-btn:hover {
+            background-color: #064a1f;
+            transform: translateY(-3px);
+        }
+
+        .download-btn:active {
+            background-color: #17811a;
+            transform: translateY(0);
+        }
+    </style>
 </head>
 <body>
-    <h1>Download Matrise Project</h1>
-    <p>Click the button below to download the project:</p>
-    <a href="path/to/your/project.zip" download>
-        <button>Download Project</button>
-    </a>
+    <div class="container">
+        <a href="downloads/Release.zip" download>
+            <button class="download-btn">Download Matrise</button>
+        </a>      
+    </div>
 </body>
 </html>
